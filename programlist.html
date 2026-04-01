@@ -1,0 +1,47 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Fun Tools</title>
+<link rel="stylesheet" href="style2.css">
+<style>
+button {margin:5px;}
+</style>
+<script>
+function checkPrime(){
+let n = document.getElementById("num").value;
+let prime = true;
+for(let i=2;i<n;i++){
+ if(n%i==0){prime=false; break;}
+}
+document.getElementById("result").innerHTML = prime?"Prime":"Not Prime";
+}
+
+function factorial(){
+let n=document.getElementById("num").value;
+let f=1;
+for(let i=1;i<=n;i++) f*=i;
+document.getElementById("result").innerHTML = f;
+}
+
+function oddEven(){
+let n=document.getElementById("num").value;
+document.getElementById("result").innerHTML = n%2==0?"Even":"Odd";
+}
+
+function palindrome(){
+let n=document.getElementById("num").value;
+let rev=n.split('').reverse().join('');
+document.getElementById("result").innerHTML = n==rev?"Palindrome":"Not Palindrome";
+}
+</script>
+</head>
+<body>
+<h2>Fun Math Tools</h2>
+<input id="num" placeholder="Enter number or text"><br><br>
+<button onclick="checkPrime()">Prime?</button>
+<button onclick="factorial()">Factorial</button>
+<button onclick="oddEven()">Odd/Even</button>
+<button onclick="palindrome()">Palindrome</button>
+<p id="result"></p>
+</body>
+</html>
