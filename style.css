@@ -1,0 +1,21 @@
+
+body{
+    font-family: Arial;
+    background-color:#ffe6f0;
+    text-align:center;
+}
+header{
+    background:#ff99cc;
+    padding:10px;
+}
+a{
+    margin:10px;
+    text-decoration:none;
+    color:white;
+}
+button{
+    background:#ff66b2;
+    color:white;
+    border:none;
+    padding:10px;
+}
